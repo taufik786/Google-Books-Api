@@ -1,0 +1,22 @@
+.card-image{
+  width: 50%;
+}
+.card-image img {
+  height: 320px !important;
+}
+.published-date {
+  color: #9b9999;
+  margin-top: -10px;
+  margin-bottom: 10px !important;
+}
+
+@media screen and (max-width:600px) {
+  .card-image {
+    width: 70%;
+  }
+}
+@media screen and (max-width:480px) {
+  .card-image {
+    width: 100%;
+  }
+}

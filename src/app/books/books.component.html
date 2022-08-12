@@ -1,0 +1,53 @@
+<app-spinner *ngIf="spinner"></app-spinner>
+<div class="container">
+  <div class="heading">
+    <h4>All Books of {{ bookName }}</h4>
+    <div class="filter">
+      <div style="margin-right: 5px;">
+        <a href="">Filter By : </a>
+      </div>
+      <div>
+        <select class="browser-default" (change)="sortedData($event.target)">
+          <option value="" disabled selected>Sort data wise</option>
+          <option value="all">All</option>
+          <option value="published">Published</option>
+          <option value="rating">Rating</option>
+          <option value="price">Price</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="all-books">
+    <div class="row" style="min-height: 90vh;">
+      <ng-container *ngFor="let book of books | paginate: { itemsPerPage: 8, currentPage: page }">
+        <div class="col s12 m3 card-div" *ngIf="searchText=='' || book.volumeInfo.title.includes(searchText)">
+          <div>
+            <div class="card" [routerLink]="['/books/'+book.id]" >
+              <div class="card-image">
+                <img
+                  class="thumbnail"
+                  src="{{ book.volumeInfo.imageLinks.thumbnail }}"
+                />
+              </div>
+              <div class="card-content">
+                <p class="title">{{ book.volumeInfo.title | substring: 40 }}</p>
+                <div style="display: flex;">
+                  <p class="rating"> {{bookRating(book.volumeInfo)}} *</p> <span *ngIf="book.volumeInfo.ratingsCount"> &nbsp;({{book.volumeInfo.ratingsCount}})</span>
+                </div>
+                <p><b>₹ {{bookAmount(book.saleInfo)}}</b></p>
+                <p class="published-date">
+                  Published At - {{ book.volumeInfo.publishedDate }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row" *ngIf="paginateFalse">
+      <div class="list">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>

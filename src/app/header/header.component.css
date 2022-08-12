@@ -1,0 +1,16 @@
+.search {
+  background-color: white !important;
+  padding: 0 12px !important;
+  border-radius: 6px !important;
+}
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 0% !important;
+    transform: translateX(50%);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .search {
+    padding: 0 6px !important;
+  }
+}

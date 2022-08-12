@@ -1,0 +1,10 @@
+<nav>
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="brand-logo" routerLink="/books">Books</a>
+      <ul class="right" *ngIf="searchBox">
+        <input class="search" type="text" placeholder="Search Your Books" [(ngModel)]="searchText" (keyup)="enterText($event.target)">
+      </ul>
+    </div>
+  </div>
+</nav>

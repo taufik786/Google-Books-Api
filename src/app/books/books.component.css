@@ -1,0 +1,98 @@
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rating {
+  background-color: green;
+  width: 36px;
+  text-align: center;
+  border-radius: 2px;
+  line-height: normal;
+  color: white;
+  font-weight: bold;
+}
+.published-date {
+  color: #9b9999;
+}
+.card-div {
+  min-height: 325px;
+}
+.card {
+  height: 423px;
+  overflow: hidden;
+}
+.thumbnail {
+  height: 270px;
+}
+
+.card {
+  cursor: pointer;
+}
+.card:hover {
+  background-color: rgb(247, 222, 222);
+  box-shadow: 1px 5px 3px 2px rgb(207 206 206 / 36%);
+}
+.heading{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  align-items: center;
+  width: 100% !important;
+}
+.waves-effect{
+  margin-left: 5px;
+}
+.btnColor{
+  background-color: red !important;
+}
+.filter{
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+}
+@media screen and (max-width:1439px){
+  .card-div{
+    width: 30% !important;
+  }
+}
+@media screen and (max-width:1138px){
+  .waves-effect{
+    margin-top: 5px;
+  }
+  .heading{
+    padding-right: 0 !important;
+  }
+}
+@media screen and (max-width:800px){
+  .card-div{
+    width: 33% !important;
+  }
+}
+@media screen and (max-width:700px){
+  .card-div{
+    width: 50% !important;
+  }
+}
+@media screen and (max-width:677px){
+  .filter{
+    flex-direction: column !important;
+    align-items: initial !important;
+  }
+}
+@media screen and (max-width:550px){
+  .card-div{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width:600px){
+  .card-div{
+    width: 100% !important;
+  }
+  .waves-effect{
+    font-size: 10px;
+    padding: 0 12px !important;
+  }
+}
+

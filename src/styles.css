@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.list nav {
+  background-color: transparent;
+  height: 64px !important;
+  overflow: hidden !important;
+}
+@media screen and (max-width: 600px) {
+  .list nav {
+    height: 57px !important;
+  }
+}
