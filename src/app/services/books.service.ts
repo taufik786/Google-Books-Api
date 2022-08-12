@@ -10,7 +10,6 @@ const booksApi = 'https://www.googleapis.com/books/v1/volumes';
 export class BooksService {
 
   searchData = new BehaviorSubject<any>(null);
-  // hideSearch = new Subject<boolean>;
   hideSearch = new BehaviorSubject<any>(true);
 
   constructor(private http: HttpClient) { }

@@ -12,7 +12,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
-import { FilterPipes } from './pipes/filter.pipe';
 import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
     SingleBookComponent,
     BookPipes,
     HeaderComponent,
-    FilterPipes,
     SpinnerComponent
   ],
   imports: [
